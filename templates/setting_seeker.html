@@ -1,0 +1,96 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/seeker.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;
+
+	}
+	.settheme
+    {
+    background-color:rgba(0,0,0,0.7);
+	text-align:center;
+	height:40px;
+    margin-top: 10px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;
+
+    }
+	.tdtheme:hover
+	{
+	background-color:black;
+	}	
+	a 
+    {
+       color: white;
+       text-decoration: none; 
+    }
+	
+</style>
+
+
+<body>
+<table width="2%" border="0px" class="tabtheme" align="left">
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="loadnotificationseek">notification</a> </td>
+	</tr>
+</table>
+<table	width="80%"   border="0px" class="tabtheme" align="right" >
+    <tr>
+        <td class="tdtheme" width="10%" ><a href="loadsearchjob "> search job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadhomeseek"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadjobinfo"> job info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadfeedback"> feedback </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadcomplain"> complain </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadprofileinfoseek"> profile info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadsettingseeker"> setting  </a></td>
+	</tr>
+</table>
+
+<table width="27%" cellspacing="30px" border="0px" class="settheme" align="right" >
+    <tr>
+        <td  class="tdtheme" width="5%" ><a href="loadprofileinfoseek"> profile info </a></td>
+    </tr>
+    <tr>
+        <td class="tdtheme" width="5%" ><a href="loadtheme"> theme </a></td>
+    </tr>
+    <tr>
+        <td  class="tdtheme" width="5%" ><a href="loadaccountsettingseek"> account setting </a></td>
+    </tr>
+    <tr>
+        <td  class="tdtheme" width="5%" ><a href="loadabout"> about </a></td>
+    </tr>
+    <tr>
+        <td  class="tdtheme" width="5%" ><a href="loadjobinfo"> job info </a></td>
+    </tr>
+    <tr>
+        <td  class="tdtheme" width="5%" ><a href="loadfeedback"> feedback </a></td>
+    </tr>
+    <tr>
+        <td  class="tdtheme" width="5" ><a href="loadcomplain"> complain </a></td>
+    </tr>
+</table>
+
+</body>
+
+</html>

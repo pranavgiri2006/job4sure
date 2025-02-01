@@ -1,0 +1,109 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/seeker.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;	
+	}
+	
+	.tdtheme:hover
+	{
+	background-color: #1f6f87;
+	}	
+	.formtheme
+	{
+	background-color:rgba(200,200,200,0.5);
+	box-shadow:5px 5px 5px black;
+	font-weigth:bold;
+	border:solid;
+	border-color:black;
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;
+	height:50px;
+    width:80%;
+    }
+    .divtheme
+    {
+    margin-top:10px;
+        margin-left:100px;
+    height: 50px;
+    }
+
+    a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+</style>
+
+
+<body>
+
+<table width="10%" border="0px" class="tabtheme" align="left">
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="loadnotificationpro">notification</a></td>
+	</tr>
+</table>
+
+<table	width="80%"   border="0px"  class="tabtheme"  align="right" >
+	 <tr>
+        <td class="tdtheme" width="10%" ><a href="loadsearchjob "> search job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadhomeseek"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadjobinfo"> job info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadfeedback"> feedback </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadcomplain"> complain </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadprofileinfoseek"> profile info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadsettingseeker"> setting  </a></td>
+	</tr>
+</table>
+<div class="divtheme">
+<form action="viewsjoburl" method="post">
+    {% csrf_token %}
+<table	  border="0px"  class="formtheme"  align="center" >
+    <tr>
+        <td>User Id</td>
+        <td>Job Id</td>
+        <td>job description </td>
+        <td>contact</td>
+        <td>labour</td>
+        <td>status</td>
+        <td>location</td>
+    </tr>
+{% for data in list3 %}
+    <tr align="center">
+        <td>{{ data.0 }}</td>
+        <td>{{ data.1 }}</td>
+        <td>{{ data.2 }}</td>
+        <td>{{ data.3 }}</td>
+        <td>{{ data.4 }}</td>
+        <td>{{ data.5 }}</td>
+        <td>{{ data.6 }}</td>
+    </tr>
+{% endfor %}
+
+</table>
+</form>
+{% csrf_token %}
+</div>
+</body>
+
+</html>

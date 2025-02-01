@@ -1,0 +1,91 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/job.jpg" %}');
+	background-size:100%
+	}
+    
+	
+	.formtheme
+	{
+	background-color:rgba(256,256,256,0.9);
+	box-shadow:5px 5px 5px black;
+	font-weigth:bold;
+	margin-top:50px;
+	border:solid;
+	border-color:black;	
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;	
+	height:100px;
+    }
+	
+	.btntheme
+	{
+	background-color:white;
+	color:black;
+	width:60px;
+	height:25px;
+	border-radius:100px;
+		
+	}
+	
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+    
+	
+
+	
+</style>
+
+
+<body>
+
+<form action="loginjpaction" method="post">
+     {% csrf_token %}
+<table	width="20%"  border="0px"  class="formtheme"  align="center" color="white"  cellspacing="20px">
+    <tr align="center">
+		<td colspan="2"><img src="{% static 'images/user.png' %}" width="100px"  height="100px"></td>
+	</tr>
+	<tr>
+		<td >user id</td>
+		<td ><input type =text name="uid" placeholder="enter user id" > </td>
+		
+	</tr>
+	<tr>
+		<td >password</td>
+		<td ><input type =password name="pwd" placeholder="enter password"> </td>
+		
+	</tr>
+{#    <tr>#}
+{#        <td > job post </td>#}
+{#        <td ><select  name="post">#}
+{#            <option> select post</option>#}
+{#            <option>JOB PROVIDER</option>#}
+{#            <option>JOB SEEKER</option>#}
+{#        </select></td>#}
+{#    </tr>#}
+    
+    <tr>
+		<td colspan=2 align="center"><input type="submit" value="SIGNIN" class="btntheme"> 
+		<a href="loadsignup" style="color:black"> CREATE ACCOUNT </a> </td>
+		
+	</tr>
+	
+</table>
+
+</form>
+<font color="white">
+{{post}}
+</font>
+</body>
+
+</html>
+

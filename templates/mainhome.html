@@ -1,0 +1,76 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url({%static "images/job.jpg"%});
+	background-size:100%;
+	
+	} 
+	.tabtheme
+	{
+		
+	text-align:center;
+	height:50px;
+	text-transform:uppercase;
+	color:white;
+	font-weigth:bold;
+    box-shadow:5px 5px 5px black;
+	font-family:arial;
+	
+	}
+	
+	.divtheme
+	{
+	background-image:url('{% static "images/button.png" %}');
+	background-size:50%;
+	background-color:white;
+	background-repeat:no-repeat;
+	width:400px;
+	height:15%;
+	box-shadow:10px 5px 5px black;
+    margin-left:530px;
+	margin-top:100px;
+	border-radius:40px;
+	} 	
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+
+	.tdtheme:hover
+	{
+	background-color:lightblue;
+	}	
+	
+
+	
+</style>
+
+
+<body>
+
+<img src="{% static "images/LOGO.png" %}" width="20%" height="30%" >
+<table	width="50%"   border="0px"  class="tabtheme"  align="right" color="white">
+	<tr>
+		<td  class="tdtheme" width=15% ><a href=loadhomepage> home </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadabout> about </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadcontact> contact </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadlogin> login </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadsignup> signup </a> </td>
+		<td  class="tdtheme" width=15% ><a href=mailto:> query </a> </td>
+	</tr>
+</table>
+
+<a href="signup.html">
+	<img src="{% static "images/button.png" %}" class="divtheme">
+	
+</a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/seeker.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+    box-shadow:5px 5px 5px black;    
+    text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	}
+	
+	.tdtheme:hover
+	{
+	background-color:black;
+	}	
+
+    .formtheme
+	{
+	background-color:rgba(200,200,200,0.5);
+	box-shadow:5px 5px 5px black;
+	font-weight: bold;
+    border: solid;
+	border-color:black;
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;
+	height:100px;
+        width:100px;
+    margin-top: 1200px;
+    }
+	.btntheme
+	{
+	background-color:white;
+	color:black;
+	width:60px;
+	height:25px;
+	border-radius:100px;
+	}
+    .divtheme
+	{
+    margin-top:100px;
+        margin-left:450px;
+	height:100px;
+    width:250px;
+    }
+    .divtab
+    {
+        margin-top: 10px;
+        
+    }
+	a
+    {
+        color: white;
+        text-decoration: none;
+    }
+
+</style>
+
+
+<body>
+
+<table width="10%" border="0px" class="tabtheme" align="left" >
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="loadnotificationseek">notification</a> </td>
+	</tr>
+</table>
+<table	width="80%"   border="0px" class="tabtheme" align="right" >	
+	
+	<tr>
+        <td class="tdtheme" width="10%" ><a href="loadsearchjob "> search job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadhomeseek"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadjobinfo"> job info </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadfeedback"> feedback </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadcomplain"> complain </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadprofileinfoseek"> profile info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadsettingseeker"> setting  </a></td>
+	</tr>
+</table>
+
+
+
+
+<div class="divtheme">
+<form action="loadfeedback" method="post">
+    {% csrf_token %}
+
+<table cellspacing="10px" border="0px"  class="formtheme"  align="center" >
+	<tr>
+        <td>userid</td>
+        <td><input type="text" name="uid" placeholder="enter user id"></td>
+	</tr>
+    <tr align="center">
+        <td> feedback </td>
+    </tr>
+	<tr>
+        <td ><input type =text name="fed" style="<textarea></textarea>" placeholder="describe your feedback"></td>
+	</tr>
+    <tr>
+		<td colspan=2><input type="submit"></td>
+	</tr>
+</table>
+</form>
+</div>    
+{% csrf_token %}
+
+
+
+
+
+</body>
+
+</html>

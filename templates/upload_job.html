@@ -1,0 +1,132 @@
+ {% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/provider.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;	
+	}
+	
+	.tdtheme:hover
+	{
+	background-color: #1f6f87;
+	}	
+	.formtheme
+    {
+        background-color:rgba(240,240,240,0.7);
+        box-shadow:5px 5px 5px black;
+        font-weigth:bold;
+        background-color:rgba(240,240,240,0.7);
+        border:solid;
+        border-color:black;
+        font-family:arial;
+        font-size:17px;
+        text-transform:uppercase;
+        width:380px;
+        margin-top: 100px;
+    }
+    
+	.btntheme
+	{
+	background-color:white;
+	color:black;
+	width:70px;
+	height:25px;
+	border-radius:100px;
+
+	}
+	a
+    {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+
+
+<body>
+
+<div width="10%" border="0px" class="tabtheme" align="left">
+	<div>
+		<div class="tdtheme" width="15%"><a href="loadnotificationpro">notification</a></div>
+	</div>
+</div>
+
+<div	width="70%"   border="0px"  class="tabtheme"  align="right" >	
+	<tr>
+        <td class="tdtheme" width="10%" ><a href="loadhomepro"> home </a></td>
+		  <td class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		  <td  class="tdtheme" width="10%" ><a href="loadupload"> upload job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="viewsfeedback"> feedback </a></td>
+        <td class="tdtheme" width="10%" ><a href="viewscomplain"> complain </a></td>
+        <td class="tdtheme" width="10%" ><a href="loadprofileinfopro"> profile info </a></td>
+        <td class="tdtheme" width="10%" ><a href="loadsetting"> setting </a></td>
+	</tr>
+</div>
+
+<form action="uploadaction" method="post" >
+    {% csrf_token %}
+    <table	cellspacing=15px  class="formtheme" border="0px" align="center">
+
+         <tr>
+            <td>user id</td>
+            <td><input type ="text" name="uid"  placeholder="user id" > </td>
+
+         </tr>
+         <tr>
+            <td>job id</td>
+            <td><input type ="text" name="jid"  placeholder="job id" > </td>
+
+         </tr>
+         <tr>
+            <td>job decription</td>
+            <td><input type ="text" name="des"  placeholder="  give your job description"> </td>
+         </tr>
+
+         <tr>
+            <td>contactNo</td>
+            <td><input type="number" name="num" placeholder="enter contact number"></td>
+         </tr>
+         <tr>
+            <td>labour</td>
+            <td><input type ="number" name="lbr"  placeholder="enter labour"></td>
+
+         </tr>
+         <tr>
+            <td>status</td>
+            <td style="text-decoration: underline">under process</td>
+
+         </tr>
+         <tr>
+            <td>location</td>
+            <td><input type="text" name="loc" placeholder="enter your locaion"></td>
+
+         </tr>
+        
+         <tr align=center>
+             <td colspan=2><input type="submit"  value="SIGNUP" class="btntheme">
+                <a href="loadlogin"></a></td>
+
+         </tr>
+
+
+    </table>
+
+</form>
+</body>
+
+</html>

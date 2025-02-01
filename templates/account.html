@@ -1,0 +1,105 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/job.jpg" %}');
+	background-size:100%
+	}
+	
+	.tabtheme
+	{
+	text-align:center;
+	height:50px;
+	text-transform:uppercase;
+	color:white;
+	box-shadow:5px 5px 5px black;
+	font-weigth:bold;
+	font-family:arial;
+	
+	}
+	
+	.formtheme
+	{
+	background-color:rgba(200,200,200,0.5);
+	box-shadow:5px 5px 5px black;
+	font-weigth:bold;
+	margin-top:50px;
+	border:solid;
+	border-color:black;	
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;	
+	}
+	
+	.btntheme
+	{
+	background-color:white;
+	color:black;
+	width:100px;
+	height:25px;
+	border-radius:100px;
+		
+	}
+	
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+
+	.tdtheme:hover
+	{
+	background-color:lightblue;
+	}	
+	
+
+	
+</style>
+
+
+<body>
+
+<img src="{% static "images/LOGO.png" %}" width="20%" height="30%" >
+<table	width="50%"   border="0px"  class="tabtheme"  align="right" color="white"  >	
+	<tr>
+		<td  class="tdtheme" width=15% ><a href=loadhomepage> home </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadabout> about </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadcontact> contact </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadlogin> login </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadsignup> signup </a> </td>
+		<td  class="tdtheme" width=15% ><a href=mailto:> query </a> </td>
+	</tr>
+</table>
+<form action="loginaction" method="post">
+     {% csrf_token %}
+<table	width="20%"   border="0px"  class="formtheme"  align="center" color="white"  >	
+	
+	<tr align=center>
+		<td><{% static 'images/user.png' %}></td>
+	</tr>
+	<tr>
+		<td >user id</td>
+		<td ><input type =text name="uid" placeholder="enter user id"> </td>
+		
+	</tr>
+	<tr>
+		<td >password</td>
+		<td ><input type =text name="pwd" placeholder="enter password"> </td>
+		
+	</tr>
+	<tr>
+		<td colspan=2><input type="submit" value="DELETE" class="btntheme"> </td>
+		
+	</tr>
+	
+</table>
+
+</form>
+
+</body>
+
+</html>
+

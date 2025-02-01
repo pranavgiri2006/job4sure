@@ -1,0 +1,62 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/provider.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;	
+	}
+	
+	.tdtheme:hover
+	{
+	background-color: #1f6f87;
+    }
+	a
+    {
+        color: white;
+        text-decoration:none;
+    }
+	
+</style>
+
+
+<body>
+
+<table width="10%" border="0px" class="tabtheme" align="left">
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="notificationpro">notification</a></td>
+	</tr>
+</table>
+
+<table	width="70%"   border="0px"  class="tabtheme"  align="right" >	
+	<tr>
+        <td  class="tdtheme" width="10%" ><a href="loadhomepro"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadupload"> upload job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="viewsfeedback"> feedback </a></td>
+        <td  class="tdtheme" width="10%" ><a href="viewscomplain"> complain </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadprofileinfopro"> profile info </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadsettingprovider"> setting </a></td>
+	</tr>
+</table>
+
+
+
+</body>
+
+</html>

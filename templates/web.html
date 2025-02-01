@@ -1,0 +1,76 @@
+
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/job.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+		
+	text-align:center;
+	height:50px;
+	text-transform:uppercase;
+	color:white;
+	font-weigth:bold;
+	font-family:arial;
+	
+	}
+	
+	.divtheme
+	{
+	background-image:url('{% static "images/button1.png" %}');
+	background-color:white;
+	background-repeat:no-repeat;
+	width:400px;
+	height:15%;
+	box-shadow:10px 5px 5px black;
+	margin-left:530px;
+	margin-top:100px;
+	border-radius:40px;
+	}
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+
+	.tdtheme:hover
+	{
+	background-color:lightblue;
+	}
+
+
+
+</style>
+
+
+<body>
+
+<img src="{% static "images/logo" %}" width="20%" height="30%" >
+<table	width="50%"   border="0px"  class="tabtheme"  align="right" color="white"  >
+	<tr>
+		<td  class="tdtheme" width=15% ><a href=home.html> home </a> </td>
+		<td  class="tdtheme" width=15% ><a href=about.html> about </a> </td>
+		<td  class="tdtheme" width=15% ><a href=contact.html> contact </a> </td>
+		<td  class="tdtheme" width=15% ><a href=login.html> login </a> </td>
+		<td  class="tdtheme" width=15% ><a href=signup.html> signup </a> </td>
+		<td  class="tdtheme" width=15% ><a href=mailto:> query </a> </td>
+	</tr>
+</table>
+
+<a href="signup.html" >
+	<img src="{% static "images/button1.png" %}" class="divtheme">
+
+</a>
+
+
+
+</body>
+
+</html>

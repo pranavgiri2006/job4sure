@@ -1,0 +1,114 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/provider.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;	
+	}
+	
+	.tdtheme:hover
+	{
+	background-color: #1f6f87;
+	}	
+	.formtheme
+	{
+	background-color:rgba(200,200,200,0.5);
+	box-shadow:5px 5px 5px black;
+	font-weigth:bold;
+	border:solid;
+	border-color:black;
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;
+	height:100px;
+    }
+
+	.btntheme
+	{
+	background-color:white;
+	color:black;
+	width:60px;
+	height:25px;
+	border-radius:100px;
+	}
+    .pwdtheme
+    {
+        color: black;
+        align:right;
+    }
+	a 
+    {
+        color: white;
+        text-decoration: none;    
+    }
+    
+    
+</style>
+
+
+<body>
+
+<table width="10%" border="0px" class="tabtheme" align="left">
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="loadnotification">notification</a></td>
+	</tr>
+</table> 
+<table	width="70%"   border="0px"  class="tabtheme"  align="right" >	
+	<tr>
+        <td  class="tdtheme" width="10%" ><a href="loadhomepro"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadupload"> upload job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="viewsfeedback"> feedback </a></td>    
+        <td  class="tdtheme" width="10%" ><a href="viewscomplain"> complain </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadprofileinfopro"> profile info </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadsettingprovider"> setting </a></td>
+	</tr>
+</table>
+
+<form action="profileproviderurl" method="post">
+    {% csrf_token %}
+<table	cellspacing="10%"  border="0px"  class="formtheme"   bgcolor="white" align="center">
+    <tr align="center">
+		<td colspan="2"><img src="{% static 'images/user.png' %}" width="100px"  height="100px"></td>
+    </tr>
+    <tr>
+        <td>user id</td>
+        <td><input type="text" name="uid" placeholder="enter user id"></td>
+    </tr>
+	<tr>
+        <td>password</td>
+        <td><input type="text" name="pwd" placeholder="enter password"></td>
+    </tr>
+    <tr style="font-size:8px" class="pwdtheme" >
+        <td><a href="forgetpassword.html"> forget password </a></td>
+    </tr>
+    
+    <tr>
+		<td colspan=2><input type="submit" class="btntheme">
+		<a href="home.html"></a></td>
+
+	</tr>
+   
+    
+</table>
+</form>
+    
+</body>
+
+</html>

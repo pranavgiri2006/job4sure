@@ -1,0 +1,75 @@
+{% load static %}
+
+<html>
+
+<style>
+	body
+	{
+	background-image:url('{% static "images/seeker.jpg" %}');
+	background-size:100%
+	
+	}
+	
+	.tabtheme
+	{
+	background-color:rgba(140,140,140,0.5);	
+	text-align:center;
+	height:40px;
+	text-transform:uppercase;
+	color:white;
+	font-weight:bold;
+	font-family:arial;
+	box-shadow:5px 5px 5px black;	
+	}
+	
+	.tdtheme:hover
+	{
+	background-color:lightblue;
+	}
+     .formtheme
+	{
+	background-color:rgba(200,200,200,0.4);
+	box-shadow:5px 5px 5px black;
+	font-weight: bold;
+	border-style: solid;
+	border-color:black;
+	font-family: Arial;
+	font-size:15px;
+	text-transform:uppercase;
+	height:20px;
+    width:20px;
+    margin-right: 160px;
+    margin-top: 1px;
+    }
+
+	a 
+    {
+       color: white;
+       text-decoration: none; 
+    }
+	
+</style>
+
+
+<body>
+<table width="10%" border="0px" class="tabtheme" align="left">
+	<tr>
+		<td  class="tdtheme" width="15%" ><a href="loadnotificationseek">notification</a> </td>
+	</tr>
+</table>
+<table	width="80%"   border="0px" class="tabtheme" align="right" >
+    <tr>
+        <td class="tdtheme" width="10%" ><a href="loadsearchjob "> search job </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadhomeseek"> home </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadabout"> about </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadjobinfo"> job info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadfeedback"> feedback </a></td>
+        <td  class="tdtheme" width="10%" ><a href="loadcomplain"> complain </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadprofileinfoseek"> profile info </a></td>
+		<td  class="tdtheme" width="10%" ><a href="loadsettingseeker"> setting  </a></td>
+	</tr>
+</table>
+
+</body>
+
+</html>

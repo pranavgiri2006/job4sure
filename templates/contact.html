@@ -1,0 +1,135 @@
+{% load static %}
+
+<html>
+
+<script>
+
+</script>
+<style>
+
+     body
+	{
+	background-image:url({%static "images/job.jpg"%});
+	background-size:100%;
+	
+	} 
+	.tabtheme
+	{
+		
+	text-align:center;
+	height:50px;
+	text-transform:uppercase;
+	color:white;
+    box-shadow:5px 5px 5px black;    
+	font-weigth:bold;
+	font-family:arial;
+	
+	}
+    .maptheme
+    {
+     box-shadow: 5px 5px 5px black ;
+     margin-bottom: 50px;
+        margin-left: 30px;
+    }
+    .formtheme
+    {
+	font-weight: bolder;
+	background-color:rgba(240,240,240,0.7);
+	border:solid;
+	border-color:black;
+	font-family:arial;
+	font-size:15px;
+	text-transform:uppercase;
+    }
+    .texttheme
+    {
+    width: 265px;
+    height: 30px;
+    font-size: 15px;
+    border: outset;
+    border-radius:10px;
+    }
+    .btntheme
+    {
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    }
+	a
+	{
+	color:white;
+	text-decoration:none;
+	}
+    .divtheme
+    {
+    margin-left: 750px;
+        margin-top: -420px;
+
+    }
+	.tdtheme:hover
+	{
+	background-color:lightblue;
+	}
+    .textarea
+    {
+    width:265px;
+    border-radius: 10px;
+    font-size: large;
+
+    }
+
+</style>
+
+<body>
+
+<img src="{% static "images/LOGO.png" %}" width="20%" height="30%" >
+<table	width="50%"   border="0px"  class="tabtheme"  align="right" color="white">
+	<tr>
+		<td  class="tdtheme" width=15% ><a href=loadhomepage> home </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadabout> about </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadcontact> contact </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadlogin> login </a> </td>
+		<td  class="tdtheme" width=15% ><a href=loadsignup> signup </a> </td>
+		<td  class="tdtheme" width=15% ><a href=mailto:> query </a> </td>
+	</tr>
+</table>
+
+<iframe class="maptheme" width="660px" height="415px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=550&amp;height=500&amp;hl=en&amp;q=%20indore+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+</iframe>
+
+<div class="divtheme">
+<form action="contacturl" method="post" >
+    {% csrf_token %}
+<table class="formtheme"  width="200px" height="25%">
+   <tr align="center">
+       <td colspan="4"><marquee scrollamount="5px" behavior="alternate">PLEASE FILL THE FORM - OUR TEAM WILL CONTACT YOU SOON</marquee></td>
+   </tr>
+   <tr align="center">
+       <td>FULL NAME</td>
+       <td><input type="text" name="fnm" placeholder="ENTER FULL NAME HERE" class="texttheme"></td>
+       <td>MAIL ID</td>
+       <td><input type="email" name="mail" placeholder="ENTER MAIL ID    HERE" class="texttheme"></td>
+   </tr>
+   <tr align="center">
+       <td>ADDRESS</td>
+       <td><textarea placeholder="ENTER ADDRESS HERE" name="add" class="textarea"></textarea></td>
+       <td>COUNTRY</td>
+       <td><select class="texttheme" name="cnt">
+       <option>SELECT COUNTRY</option>
+       <option>INDIA</option>
+       <option>PAKISTAN</option>
+       <option>USA</option>
+       </select></td>
+   </tr>
+   <tr>
+       <td colspan="4" align="center" ><input type="submit" value="contact" class="btntheme"></td>
+   </tr>
+</table>
+</form>
+    {% csrf_token %}
+</div>
+</body>
+
+</html>
